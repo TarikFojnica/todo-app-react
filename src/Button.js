@@ -5,8 +5,8 @@ import './App.css';
 class Button extends Component {
 	render() {
 		return (
-			<button>Test Button</button>
-		);
+			<button className="uk-button">Test Button</button>
+		); 
 	};
 }
 
