@@ -1,0 +1,19 @@
+body {
+	@include gradient-vertical(#7D827C, #24547D);
+	color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: white;
+}
+
+.container {
+	width: 768px;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.light-bg {
+	background-color: rgba(255,255,255,.1);
+}
