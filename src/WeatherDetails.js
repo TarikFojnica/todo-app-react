@@ -14,15 +14,25 @@ class WeatherDetails extends Component {
 				self.setState({
 					weatherData: res.body.daily.data
 				})
+				console.log(res.body.daily.data)
 			})
 	};
 
 	render() {
+		var allItems = this.state.weatherData.map(function(result, id) {
+      return (
+      	<div className="uk-panel uk-panel-box uk-width-medium-1-3" key={id}>
+					<div className="uk-panel-badge uk-badge">{result.icon}</div>
+					<h3 className="uk-panel-title">{result.icon}</h3>	
+					<p>{result.summary}</p>
+      	</div>
+      );
+    });
+
 		return (
-			<div>
-				{this.state.weatherData.map(function(result, id) {
-           return <p key={id}>{result.icon}</p>;
-        })}
+			<div className="uk-grid">
+				<h1> From wethaer details component </h1>
+				{allItems}
 	    </div>
 		)
 	};
