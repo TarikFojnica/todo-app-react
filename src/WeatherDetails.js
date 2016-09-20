@@ -18,15 +18,11 @@ class WeatherDetails extends Component {
 	};
 
 	render() {
-		var names = ['Jake', 'Jon', 'Thruster'];
-		var namesList = this.state.weatherData.map((name) => {
-      <li>{name}</li>;
-      console.log(name)
-    });
-		
 		return (
 			<div>
-				{namesList}
+				{this.state.weatherData.map(function(result, id) {
+           return <p key={id}>{result.icon}</p>;
+        })}
 	    </div>
 		)
 	};
